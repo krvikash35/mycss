@@ -1,0 +1,26 @@
+{
+  "name": "mycss",
+  "version": "1.0.0",
+  "description": "simple css library on material design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-dev": "sass --sourcemap=none --watch src/scss/index.scss:dist/css/material.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krvikash35/mycss.git"
+  },
+  "keywords": [
+    "css",
+    "library",
+    "material",
+    "design"
+  ],
+  "author": "vikash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krvikash35/mycss/issues"
+  },
+  "homepage": "https://github.com/krvikash35/mycss#readme"
+}
