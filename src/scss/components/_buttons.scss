@@ -15,26 +15,41 @@
 
 .btn-flat{
   @extend .btn;
-  background-color: $btn-flat-bg-color;
-  color: $btn-flat-text-color;
+  background-color: transparent;
+  color: $text-color;
   box-shadow: none;
-
+  opacity: 1;
+  // transition: opacity 1s ease-in; // linear, ease, ease-in, ease-in-out
     &:focus,
     &:active {
-      background-color: rgba(lighten($btn-flat-bg-color, 50%), $btn-flat-bg-color-opacity)
+      @if $theme-type == "dark"{
+        background-color: rgba(#CCCCCC, 0.25)
+      }
+      @else{
+        background-color: rgba(#999999, 0.40)
+      }
     }
-
     &:hover {
-      background-color: rgba(lighten($btn-flat-bg-color, 30%), $btn-flat-bg-color-opacity)
+      // @if $theme-type == "dark"{
+      //   background-color: rgba(#CCCCCC, 0.10)
+      // }
+      // @else{
+      //   background-color: rgba(#999999, 0.30)
+      // }
+      // transform: scale(0);
+      // opacity: 0.5;
     }
-
 }
-
 .btn-flat[disabled],
 .btn-flat.disabled,
 .btn-flat:disabled{
-  color: rgba($btn-flat-text-color, $btn-flat-text-color-opacity) !important;
-  background-color: $btn-flat-bg-color !important;
+  @if $theme-type == "dark"{
+    color: rgba($text-color, 0.30)
+  }
+  @else{
+    color: rgba($text-color, 0.26)
+  }
+  background-color: transparent !important;
 }
 
 .btn-raised{

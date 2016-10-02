@@ -5,20 +5,17 @@
 @import "components/mixins";
 @import "components/color";
 
-// Variables;
 @import "components/variables";
-
-// Reset
 @import "components/normalize";
 
 // font, icon
 @import "components/icons";
 @import "components/roboto";
 
-//typography
+// //typography
 @import "components/global";
 @import "components/typography";
 
 //component
 @import  "components/buttons";
-@import  "components/waves";
+@import "components/waves"
