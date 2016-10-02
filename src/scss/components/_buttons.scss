@@ -81,7 +81,26 @@
 }
 
 .btn-fab{
+  outline: 0;
+  border: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: $accent-color;
+  color: $text-color;
+  @extend .z-depth-1;
+  transition: all 1s;
 
+  &:active,
+  &:focus{
+    @extend .z-depth-3;
+    background-color: darken($accent-color, 10%);
+  }
+
+  &:hover{
+    @extend .z-depth-1-half;
+    background-color: darken($accent-color, 5%);
+  }
 }
 
 

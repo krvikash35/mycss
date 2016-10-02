@@ -33,7 +33,7 @@
 
 /* 2. Colors
    ========================================================================== */
-$theme-type: "light" !default; // dark or light
+$theme-type: "dark" !default; // dark or light
 $theme-color: "blue" !default;
 $primary-color: color($theme-color, "darken-3") !default;
 $secondary-color: color($theme-color, "darken-2") !default;
@@ -64,9 +64,3 @@ $btn-height: 36px !default;
 $btn-border: none !default;
 $btn-radius: 2px !default;
 $btn-padding: 0 10px !default;
-
-//btn-flat
-// $btn-flat-bg-color: transparent !default;
-// $btn-flat-bg-color-opacity: 0.30 !default; //dark: 0.25, light: 0.40 for active
-// $btn-flat-text-color: black !default; //dark: black, light: white
-// $btn-flat-text-color-opacity: 0.28 !default; //dark: 0.30, light: 0.26 for disabled
