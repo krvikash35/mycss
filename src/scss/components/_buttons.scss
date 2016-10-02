@@ -1,3 +1,4 @@
+//btn shared style
 .btn{
   min-width: $btn-min-width;
   height: $btn-height;
@@ -13,11 +14,13 @@
   cursor: pointer;
 }
 
+//btn-flat style
 .btn-flat{
   @extend .btn;
   background-color: transparent;
   color: $text-color;
   box-shadow: none;
+  transition: all 1s;
     &:focus,
     &:active {
       @if $theme-type == "dark"{
@@ -29,7 +32,7 @@
     }
     &:hover {
       @if $theme-type == "dark"{
-        background-color: rgba(#CCCCCC, 0.10)
+        background-color: rgba(#CCCCCC, 0.15)
       }
       @else{
         background-color: rgba(#999999, 0.30)
@@ -48,8 +51,33 @@
   background-color: transparent !important;
 }
 
+//btn-raised style
 .btn-raised{
-
+  @extend .btn;
+  background-color: $accent-color;
+  @extend .z-depth-1;
+  transition: all 1s;
+  &:active,
+  &:focus{
+    @extend .z-depth-3;
+    background-color: darken($accent-color, 10%);
+  }
+  &:hover{
+        @extend .z-depth-1-half;
+        background-color: darken($accent-color, 5%);
+  }
+}
+.btn-raised[disabled],
+.btn-raised.disabled,
+.btn-raised:disabled{
+    background-color: rgba($text-color, 0.12);
+  @extend .z-depth-0;
+  @if $theme-type == "dark"{
+    color: rgba($text-color, 0.30);
+  }
+  @else{
+    color: rgba($text-color, 0.26);
+  }
 }
 
 .btn-fab{
