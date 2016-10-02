@@ -18,8 +18,6 @@
   background-color: transparent;
   color: $text-color;
   box-shadow: none;
-  opacity: 1;
-  // transition: opacity 1s ease-in; // linear, ease, ease-in, ease-in-out
     &:focus,
     &:active {
       @if $theme-type == "dark"{
@@ -30,14 +28,12 @@
       }
     }
     &:hover {
-      // @if $theme-type == "dark"{
-      //   background-color: rgba(#CCCCCC, 0.10)
-      // }
-      // @else{
-      //   background-color: rgba(#999999, 0.30)
-      // }
-      // transform: scale(0);
-      // opacity: 0.5;
+      @if $theme-type == "dark"{
+        background-color: rgba(#CCCCCC, 0.10)
+      }
+      @else{
+        background-color: rgba(#999999, 0.30)
+      }
     }
 }
 .btn-flat[disabled],
@@ -59,6 +55,9 @@
 .btn-fab{
 
 }
+
+
+
 
 //
 //
