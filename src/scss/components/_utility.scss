@@ -1,15 +1,39 @@
-body{
-  background-color: $secondary-color;
-  color: $text-color;
-}
-
-header{
-  background-color: $primary-color;
-}
-
+/*
+1. center
+2. text-primary
+3. text-secondary
+4. text-disabled
+5. z-depth-x
+*/
 .center{
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+
+.text-primary{
+  @if $theme-type == "dark"{
+    color: rgba($text-color, 1);
+  }else{
+    color: rgba($text-color, 0.87);
+  }
+}
+
+.text-secondary{
+  @if $theme-type == "dark"{
+    color: rgba($text-color, 0.70);
+  }else{
+    color: rgba($text-color, 0.54);
+  }
+}
+
+.text-disabled{
+  @if $theme-type == "dark"{
+    color: rgba($text-color, 0.50);
+  }else{
+    color: rgba($text-color, 0.38);
+  }
 }
 
 // Z-levels

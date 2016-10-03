@@ -16,6 +16,12 @@ html {
 
 body {
   margin: 0;
+  background-color: $secondary-color;
+  color: $text-color;
+}
+
+header{
+  background-color: $primary-color;
 }
 
 /* HTML5 display definitions

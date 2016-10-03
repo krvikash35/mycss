@@ -1636,7 +1636,12 @@ html {
  * Remove default margin.
  */
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: #1976D2;
+  color: #FFFFFF; }
+
+header {
+  background-color: #1565C0; }
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -2005,16 +2010,32 @@ th {
   src: url("../fonts/roboto/Roboto-Medium.eot");
   src: url("../fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/roboto/Roboto-Medium.woff") format("woff"), url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
   font-weight: 500; }
-body {
-  background-color: #1976D2;
-  color: #FFFFFF; }
-
-header {
-  background-color: #1565C0; }
-
+/*
+1. center
+2. text-primary
+3. text-secondary
+4. text-disabled
+5. z-depth-x
+*/
 .center {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  align-items: center; }
+
+.text-primary {
+  color: white; }
+  .text-primary else {
+    color: rgba(255, 255, 255, 0.87); }
+
+.text-secondary {
+  color: rgba(255, 255, 255, 0.7); }
+  .text-secondary else {
+    color: rgba(255, 255, 255, 0.54); }
+
+.text-disabled {
+  color: rgba(255, 255, 255, 0.5); }
+  .text-disabled else {
+    color: rgba(255, 255, 255, 0.38); }
 
 .z-depth-0, .btn-raised[disabled],
 .btn-raised.disabled,
@@ -2178,6 +2199,12 @@ small {
     .flow-text {
       font-size: 1.2rem; } }
 
+/*
+1. btn
+2. btn-flat
+3. btn-raised
+4. btn-fab
+*/
 .btn, .btn-flat, .btn-raised {
   min-width: 88px;
   height: 36px;
@@ -2197,7 +2224,7 @@ small {
   color: #FFFFFF;
   box-shadow: none;
   transition: all 1s; }
-  .btn-flat:focus, .btn-flat:active {
+  .btn-flat:focus, .btn-flat:active, .btn-flat[active=true] {
     background-color: rgba(204, 204, 204, 0.25); }
   .btn-flat:hover {
     background-color: rgba(204, 204, 204, 0.15); }
@@ -2228,13 +2255,18 @@ small {
   width: 56px;
   height: 56px;
   border-radius: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
   background-color: #FF4081;
   color: #FFFFFF;
   transition: all 1s; }
   .btn-fab:active, .btn-fab:focus {
     background-color: #ff0d5f; }
   .btn-fab:hover {
-    background-color: #ff2770; }
+    background-color: #ff2770;
+    cursor: pointer; }
 
 .ripple {
   position: relative;
