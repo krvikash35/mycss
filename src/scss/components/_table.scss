@@ -1,0 +1,23 @@
+.table{
+  width: 100%;
+}
+.table td,
+.table th{
+  text-align: left;
+  padding: 5px 10px 5px 10px;
+  @if $theme-type == "dark"{
+    border-bottom: 1px solid rgba(#FFFFFF, 0.12);
+  }
+  @else{
+    border-bottom: 1px solid rgba(#000000, 0.12);
+  }
+
+}
+
+.table td{
+  color: rgba(#000000, 0.87)
+}
+
+.table th{
+  color: rgba(#000000, 0.54)
+}
