@@ -1,0 +1,16 @@
+.tab-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  //flex-flow: ''; //shorthand for flex-wrap and flex-direction
+  // align-items: '';
+  // align-content: '';
+  justify-content: space-around;
+  height: 48px;
+  background-color: red;
+}
+
+.tab-item{
+  text-transform: uppercase;
+
+}

@@ -2289,3 +2289,14 @@ small {
   opacity: 1;
   transform: scale(50);
   transition: 0s; }
+
+.tab-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  height: 48px;
+  background-color: red; }
+
+.tab-item {
+  text-transform: uppercase; }
