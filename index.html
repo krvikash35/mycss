@@ -13,29 +13,398 @@
 <!-- DIVIDERS, PROGRESS, TOOLTIP, DIALOG -->
 
 <body>
-    <header class="center">
+    <header class="center-nowrap">
         <p>This is header. This is just for testing</p>
     </header>
-    <header class="center">
+
+    <header class="center-nowrap">
         <p>BUTTON SAMPLE</p>
     </header>
-    <div class="center">
+    <div class="center-nowrap">
         <button class="btn-flat ripple">Flat Button</button>
         <button class="btn-flat ripple" disabled="true">Flat Button Disabled</button>
         <button class="btn-raised ripple">Raised Button</button>
         <button class="btn-raised ripple" disabled="true">Raised Button disabled</button>
         <button class="btn-fab ripple"><i class="material-icons">add</i></button>
     </div>
-    <header class="center">
+    <header class="center-nowrap">
         <p>TAB SAMPLE</p>
     </header>
     <div class="tab-container">
-      <div class="tab-item">tab-item1</div>
-      <div class="tab-item">tab-item2</div>
-      <div class="tab-item">tab-item3</div>
-      <div class="tab-item">tab-item4</div>
-      <div class="tab-item">tab-item5</div>
+        <div class="tab-item">tab-item1</div>
+        <div class="tab-item">tab-item2</div>
+        <div class="tab-item">tab-item3</div>
+        <div class="tab-item">tab-item4</div>
+        <div class="tab-item">tab-item5</div>
     </div>
+
+
+
+
+    <header class="center-nowrap">
+        <p>UTILITY SAMPLE</p>
+    </header>
+    <div class="center-nowrap bg-pink bg-darken-4">
+      <div class="bg-pink bg-accent-4">.center-nowrap item-1</div>
+      <div class="bg-pink bg-accent-4">.center-nowrap item-1</div>
+      <div class="bg-pink bg-accent-4">.center-nowrap item-1</div>
+    </div>
+    <div class="center-wrap bg-teal bg-darken-4">
+      <div class="bg-teal bg-accent-4" >.center-wrap item-1</div>
+      <div class="bg-teal bg-accent-4" >.center-wrap item-1</div>
+      <div class="bg-teal bg-accent-4">.center-wrap item-1</div>
+    </div>
+    <div class="center-nowrap bg-brown bg-darken-4">
+      <div class="center-equal  ">.center-nowrap item-1 .center-equal</div>
+      <div class="center-equal ">.center-nowrap item-1 .center-equal</div>
+      <div class="center-equal  ">.center-nowrap item-1 .center-equal</div>
+    </div>
+
+
+
+    <header class="center-nowrap">
+        <p>COLOR SAMPLE(use bg for background-color or text for text color)</p>
+    </header>
+    <p>
+      Notes: Below color variables are used to theme the whole html element wherever possible. see the sass code
+      snippet also for the logic. these color value will channge depending on theme type 'dark' or 'light'. In normalize
+      component header.background-color=$primary-color; body.background-color=$secondary-color; body.color=$text-color;
+      <ul>
+        <li>$theme-color</li>
+        <li>$primary-color</li>
+        <li>$secondary-color</li>
+        <li>$accent-color</li>
+        <li>$text-color</li>
+        <li>$accent-color</li>
+        <li>$success-color</li>
+        <li>$error-color</li>
+        <li>$link-color</li>
+      </ul>
+      <pre>
+        $theme-type: "dark" !default; // dark or light
+        $theme-color: "blue" !default;
+        $primary-color: color($theme-color, "darken-3") !default;
+        $secondary-color: color($theme-color, "darken-2") !default;
+        $accent-color: #FF4081 !default; //pink A200
+        $text-color: #FFFFFF !default; //white
+
+        @if $theme-type != "dark" {
+          $primary-color: color($theme-color, "lighten-3") ;
+          $secondary-color: color($theme-color, "lighten-4") ;
+          $accent-color: #69F0AE ;//green A200
+          $text-color: #000000 ; //black
+        }
+        $success-color: color("green", "base") !default;
+        $error-color: color("red", "base") !default;
+        $link-color: color("light-blue", "darken-1") !default;
+      </pre>
+    </p>
+    <div >
+        <div class="bg-red bg-accent-1 equal ">.bg-red.bg-accent-1</div>
+        <div class="bg-red bg-accent-2 equal">.bg-red.bg-accent-2</div>
+        <div class="bg-red bg-accent-3 equal">.bg-red.bg-accent-3</div>
+        <div class="bg-red bg-accent-4 equal">.bg-red.bg-accent-4</div>
+        <div class="bg-red bg-darken-1 equal">.bg-red.bg-darken-1</div>
+        <div class="bg-red bg-darken-2 equal">.bg-red.bg-darken-2</div>
+        <div class="bg-red bg-darken-3 equal">.bg-red.bg-darken-3</div>
+        <div class="bg-red bg-darken-4 equal">.bg-red.bg-darken-4</div>
+        <div class="bg-red equal equal">bg-red</div>
+        <div class="bg-red bg-lighten-1 equal">.bg-red.bg-lighten-1</div>
+        <div class="bg-red bg-lighten-2 equal">.bg-red.bg-lighten-2</div>
+        <div class="bg-red bg-lighten-3 equal">.bg-red.bg-lighten-3</div>
+        <div class="bg-red bg-lighten-4 equal">.bg-red.bg-lighten-4</div>
+        <div class="bg-red bg-lighten-5 equal">.bg-red.bg-lighten-5</div>
+    </div>
+    <div class="equal">
+        <div class="bg-pink bg-accent-1">.bg-pink.bg-accent-1</div>
+        <div class="bg-pink bg-accent-2">.bg-pink.bg-accent-2</div>
+        <div class="bg-pink bg-accent-3">.bg-pink.bg-accent-3</div>
+        <div class="bg-pink bg-accent-4">.bg-pink.bg-accent-4</div>
+        <div class="bg-pink bg-darken-1">.bg-pink.bg-darken-1</div>
+        <div class="bg-pink bg-darken-2">.bg-pink.bg-darken-2</div>
+        <div class="bg-pink bg-darken-3">.bg-pink.bg-darken-3</div>
+        <div class="bg-pink bg-darken-4">.bg-pink.bg-darken-4</div>
+        <div class="bg-pink">bg-pink</div>
+        <div class="bg-pink bg-lighten-1">.bg-pink.bg-lighten-1</div>
+        <div class="bg-pink bg-lighten-2">.bg-pink.bg-lighten-2</div>
+        <div class="bg-pink bg-lighten-3">.bg-pink.bg-lighten-3</div>
+        <div class="bg-pink bg-lighten-4">.bg-pink.bg-lighten-4</div>
+        <div class="bg-pink bg-lighten-5">.bg-pink.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-purple bg-accent-1">.bg-purple.bg-accent-1</div>
+        <div class="bg-purple bg-accent-2">.bg-purple.bg-accent-2</div>
+        <div class="bg-purple bg-accent-3">.bg-purple.bg-accent-3</div>
+        <div class="bg-purple bg-accent-4">.bg-purple.bg-accent-4</div>
+        <div class="bg-purple bg-darken-1">.bg-purple.bg-darken-1</div>
+        <div class="bg-purple bg-darken-2">.bg-purple.bg-darken-2</div>
+        <div class="bg-purple bg-darken-3">.bg-purple.bg-darken-3</div>
+        <div class="bg-purple bg-darken-4">.bg-purple.bg-darken-4</div>
+        <div class="bg-purple">bg-purple</div>
+        <div class="bg-purple bg-lighten-1">.bg-purple.bg-lighten-1</div>
+        <div class="bg-purple bg-lighten-2">.bg-purple.bg-lighten-2</div>
+        <div class="bg-purple bg-lighten-3">.bg-purple.bg-lighten-3</div>
+        <div class="bg-purple bg-lighten-4">.bg-purple.bg-lighten-4</div>
+        <div class="bg-purple bg-lighten-5">.bg-purple.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-deep-purple bg-accent-1">.bg-deep-purple.bg-accent-1</div>
+        <div class="bg-deep-purple bg-accent-2">.bg-deep-purple.bg-accent-2</div>
+        <div class="bg-deep-purple bg-accent-3">.bg-deep-purple.bg-accent-3</div>
+        <div class="bg-deep-purple bg-accent-4">.bg-deep-purple.bg-accent-4</div>
+        <div class="bg-deep-purple bg-darken-1">.bg-deep-purple.bg-darken-1</div>
+        <div class="bg-deep-purple bg-darken-2">.bg-deep-purple.bg-darken-2</div>
+        <div class="bg-deep-purple bg-darken-3">.bg-deep-purple.bg-darken-3</div>
+        <div class="bg-deep-purple bg-darken-4">.bg-deep-purple.bg-darken-4</div>
+        <div class="bg-deep-purple">bg-deep-purple</div>
+        <div class="bg-deep-purple bg-lighten-1">.bg-deep-purple.bg-lighten-1</div>
+        <div class="bg-deep-purple bg-lighten-2">.bg-deep-purple.bg-lighten-2</div>
+        <div class="bg-deep-purple bg-lighten-3">.bg-deep-purple.bg-lighten-3</div>
+        <div class="bg-deep-purple bg-lighten-4">.bg-deep-purple.bg-lighten-4</div>
+        <div class="bg-deep-purple bg-lighten-5">.bg-deep-purple.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-indigo bg-accent-1">.bg-indigo.bg-accent-1</div>
+        <div class="bg-indigo bg-accent-2">.bg-indigo.bg-accent-2</div>
+        <div class="bg-indigo bg-accent-3">.bg-indigo.bg-accent-3</div>
+        <div class="bg-indigo bg-accent-4">.bg-indigo.bg-accent-4</div>
+        <div class="bg-indigo bg-darken-1">.bg-indigo.bg-darken-1</div>
+        <div class="bg-indigo bg-darken-2">.bg-indigo.bg-darken-2</div>
+        <div class="bg-indigo bg-darken-3">.bg-indigo.bg-darken-3</div>
+        <div class="bg-indigo bg-darken-4">.bg-indigo.bg-darken-4</div>
+        <div class="bg-indigo">bg-indigo</div>
+        <div class="bg-indigo bg-lighten-1">.bg-indigo.bg-lighten-1</div>
+        <div class="bg-indigo bg-lighten-2">.bg-indigo.bg-lighten-2</div>
+        <div class="bg-indigo bg-lighten-3">.bg-indigo.bg-lighten-3</div>
+        <div class="bg-indigo bg-lighten-4">.bg-indigo.bg-lighten-4</div>
+        <div class="bg-indigo bg-lighten-5">.bg-indigo.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-blue bg-accent-1">.bg-blue.bg-accent-1</div>
+        <div class="bg-blue bg-accent-2">.bg-blue.bg-accent-2</div>
+        <div class="bg-blue bg-accent-3">.bg-blue.bg-accent-3</div>
+        <div class="bg-blue bg-accent-4">.bg-blue.bg-accent-4</div>
+        <div class="bg-blue bg-darken-1">.bg-blue.bg-darken-1</div>
+        <div class="bg-blue bg-darken-2">.bg-blue.bg-darken-2</div>
+        <div class="bg-blue bg-darken-3">.bg-blue.bg-darken-3</div>
+        <div class="bg-blue bg-darken-4">.bg-blue.bg-darken-4</div>
+        <div class="bg-blue">bg-blue</div>
+        <div class="bg-blue bg-lighten-1">.bg-blue.bg-lighten-1</div>
+        <div class="bg-blue bg-lighten-2">.bg-blue.bg-lighten-2</div>
+        <div class="bg-blue bg-lighten-3">.bg-blue.bg-lighten-3</div>
+        <div class="bg-blue bg-lighten-4">.bg-blue.bg-lighten-4</div>
+        <div class="bg-blue bg-lighten-5">.bg-blue.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-light-blue bg-accent-1">.bg-light-blue.bg-accent-1</div>
+        <div class="bg-light-blue bg-accent-2">.bg-light-blue.bg-accent-2</div>
+        <div class="bg-light-blue bg-accent-3">.bg-light-blue.bg-accent-3</div>
+        <div class="bg-light-blue bg-accent-4">.bg-light-blue.bg-accent-4</div>
+        <div class="bg-light-blue bg-darken-1">.bg-light-blue.bg-darken-1</div>
+        <div class="bg-light-blue bg-darken-2">.bg-light-blue.bg-darken-2</div>
+        <div class="bg-light-blue bg-darken-3">.bg-light-blue.bg-darken-3</div>
+        <div class="bg-light-blue bg-darken-4">.bg-light-blue.bg-darken-4</div>
+        <div class="bg-light-blue">bg-light-blue</div>
+        <div class="bg-light-blue bg-lighten-1">.bg-light-blue.bg-lighten-1</div>
+        <div class="bg-light-blue bg-lighten-2">.bg-light-blue.bg-lighten-2</div>
+        <div class="bg-light-blue bg-lighten-3">.bg-light-blue.bg-lighten-3</div>
+        <div class="bg-light-blue bg-lighten-4">.bg-light-blue.bg-lighten-4</div>
+        <div class="bg-light-blue bg-lighten-5">.bg-light-blue.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-cyan bg-accent-1">.bg-cyan.bg-accent-1</div>
+        <div class="bg-cyan bg-accent-2">.bg-cyan.bg-accent-2</div>
+        <div class="bg-cyan bg-accent-3">.bg-cyan.bg-accent-3</div>
+        <div class="bg-cyan bg-accent-4">.bg-cyan.bg-accent-4</div>
+        <div class="bg-cyan bg-darken-1">.bg-cyan.bg-darken-1</div>
+        <div class="bg-cyan bg-darken-2">.bg-cyan.bg-darken-2</div>
+        <div class="bg-cyan bg-darken-3">.bg-cyan.bg-darken-3</div>
+        <div class="bg-cyan bg-darken-4">.bg-cyan.bg-darken-4</div>
+        <div class="bg-cyan">bg-cyan</div>
+        <div class="bg-cyan bg-lighten-1">.bg-cyan.bg-lighten-1</div>
+        <div class="bg-cyan bg-lighten-2">.bg-cyan.bg-lighten-2</div>
+        <div class="bg-cyan bg-lighten-3">.bg-cyan.bg-lighten-3</div>
+        <div class="bg-cyan bg-lighten-4">.bg-cyan.bg-lighten-4</div>
+        <div class="bg-cyan bg-lighten-5">.bg-cyan.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-teal bg-accent-1">.bg-teal.bg-accent-1</div>
+        <div class="bg-teal bg-accent-2">.bg-teal.bg-accent-2</div>
+        <div class="bg-teal bg-accent-3">.bg-teal.bg-accent-3</div>
+        <div class="bg-teal bg-accent-4">.bg-teal.bg-accent-4</div>
+        <div class="bg-teal bg-darken-1">.bg-teal.bg-darken-1</div>
+        <div class="bg-teal bg-darken-2">.bg-teal.bg-darken-2</div>
+        <div class="bg-teal bg-darken-3">.bg-teal.bg-darken-3</div>
+        <div class="bg-teal bg-darken-4">.bg-teal.bg-darken-4</div>
+        <div class="bg-teal">bg-teal</div>
+        <div class="bg-teal bg-lighten-1">.bg-teal.bg-lighten-1</div>
+        <div class="bg-teal bg-lighten-2">.bg-teal.bg-lighten-2</div>
+        <div class="bg-teal bg-lighten-3">.bg-teal.bg-lighten-3</div>
+        <div class="bg-teal bg-lighten-4">.bg-teal.bg-lighten-4</div>
+        <div class="bg-teal bg-lighten-5">.bg-teal.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-green bg-accent-1">.bg-green.bg-accent-1</div>
+        <div class="bg-green bg-accent-2">.bg-green.bg-accent-2</div>
+        <div class="bg-green bg-accent-3">.bg-green.bg-accent-3</div>
+        <div class="bg-green bg-accent-4">.bg-green.bg-accent-4</div>
+        <div class="bg-green bg-darken-1">.bg-green.bg-darken-1</div>
+        <div class="bg-green bg-darken-2">.bg-green.bg-darken-2</div>
+        <div class="bg-green bg-darken-3">.bg-green.bg-darken-3</div>
+        <div class="bg-green bg-darken-4">.bg-green.bg-darken-4</div>
+        <div class="bg-green">bg-green</div>
+        <div class="bg-green bg-lighten-1">.bg-green.bg-lighten-1</div>
+        <div class="bg-green bg-lighten-2">.bg-green.bg-lighten-2</div>
+        <div class="bg-green bg-lighten-3">.bg-green.bg-lighten-3</div>
+        <div class="bg-green bg-lighten-4">.bg-green.bg-lighten-4</div>
+        <div class="bg-green bg-lighten-5">.bg-green.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-light-green bg-accent-1">.bg-light-green.bg-accent-1</div>
+        <div class="bg-light-green bg-accent-2">.bg-light-green.bg-accent-2</div>
+        <div class="bg-light-green bg-accent-3">.bg-light-green.bg-accent-3</div>
+        <div class="bg-light-green bg-accent-4">.bg-light-green.bg-accent-4</div>
+        <div class="bg-light-green bg-darken-1">.bg-light-green.bg-darken-1</div>
+        <div class="bg-light-green bg-darken-2">.bg-light-green.bg-darken-2</div>
+        <div class="bg-light-green bg-darken-3">.bg-light-green.bg-darken-3</div>
+        <div class="bg-light-green bg-darken-4">.bg-light-green.bg-darken-4</div>
+        <div class="bg-light-green">bg-light-green</div>
+        <div class="bg-light-green bg-lighten-1">.bg-light-green.bg-lighten-1</div>
+        <div class="bg-light-green bg-lighten-2">.bg-light-green.bg-lighten-2</div>
+        <div class="bg-light-green bg-lighten-3">.bg-light-green.bg-lighten-3</div>
+        <div class="bg-light-green bg-lighten-4">.bg-light-green.bg-lighten-4</div>
+        <div class="bg-light-green bg-lighten-5">.bg-light-green.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-lime bg-accent-1">.bg-lime.bg-accent-1</div>
+        <div class="bg-lime bg-accent-2">.bg-lime.bg-accent-2</div>
+        <div class="bg-lime bg-accent-3">.bg-lime.bg-accent-3</div>
+        <div class="bg-lime bg-accent-4">.bg-lime.bg-accent-4</div>
+        <div class="bg-lime bg-darken-1">.bg-lime.bg-darken-1</div>
+        <div class="bg-lime bg-darken-2">.bg-lime.bg-darken-2</div>
+        <div class="bg-lime bg-darken-3">.bg-lime.bg-darken-3</div>
+        <div class="bg-lime bg-darken-4">.bg-lime.bg-darken-4</div>
+        <div class="bg-lime">bg-lime</div>
+        <div class="bg-lime bg-lighten-1">.bg-lime.bg-lighten-1</div>
+        <div class="bg-lime bg-lighten-2">.bg-lime.bg-lighten-2</div>
+        <div class="bg-lime bg-lighten-3">.bg-lime.bg-lighten-3</div>
+        <div class="bg-lime bg-lighten-4">.bg-lime.bg-lighten-4</div>
+        <div class="bg-lime bg-lighten-5">.bg-lime.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-yellow bg-accent-1">.bg-yellow.bg-accent-1</div>
+        <div class="bg-yellow bg-accent-2">.bg-yellow.bg-accent-2</div>
+        <div class="bg-yellow bg-accent-3">.bg-yellow.bg-accent-3</div>
+        <div class="bg-yellow bg-accent-4">.bg-yellow.bg-accent-4</div>
+        <div class="bg-yellow bg-darken-1">.bg-yellow.bg-darken-1</div>
+        <div class="bg-yellow bg-darken-2">.bg-yellow.bg-darken-2</div>
+        <div class="bg-yellow bg-darken-3">.bg-yellow.bg-darken-3</div>
+        <div class="bg-yellow bg-darken-4">.bg-yellow.bg-darken-4</div>
+        <div class="bg-yellow">bg-yellow</div>
+        <div class="bg-yellow bg-lighten-1">.bg-yellow.bg-lighten-1</div>
+        <div class="bg-yellow bg-lighten-2">.bg-yellow.bg-lighten-2</div>
+        <div class="bg-yellow bg-lighten-3">.bg-yellow.bg-lighten-3</div>
+        <div class="bg-yellow bg-lighten-4">.bg-yellow.bg-lighten-4</div>
+        <div class="bg-yellow bg-lighten-5">.bg-yellow.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-amber bg-accent-1">.bg-amber.bg-accent-1</div>
+        <div class="bg-amber bg-accent-2">.bg-amber.bg-accent-2</div>
+        <div class="bg-amber bg-accent-3">.bg-amber.bg-accent-3</div>
+        <div class="bg-amber bg-accent-4">.bg-amber.bg-accent-4</div>
+        <div class="bg-amber bg-darken-1">.bg-amber.bg-darken-1</div>
+        <div class="bg-amber bg-darken-2">.bg-amber.bg-darken-2</div>
+        <div class="bg-amber bg-darken-3">.bg-amber.bg-darken-3</div>
+        <div class="bg-amber bg-darken-4">.bg-amber.bg-darken-4</div>
+        <div class="bg-amber">bg-amber</div>
+        <div class="bg-amber bg-lighten-1">.bg-amber.bg-lighten-1</div>
+        <div class="bg-amber bg-lighten-2">.bg-amber.bg-lighten-2</div>
+        <div class="bg-amber bg-lighten-3">.bg-amber.bg-lighten-3</div>
+        <div class="bg-amber bg-lighten-4">.bg-amber.bg-lighten-4</div>
+        <div class="bg-amber bg-lighten-5">.bg-amber.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-orange bg-accent-1">.bg-orange.bg-accent-1</div>
+        <div class="bg-orange bg-accent-2">.bg-orange.bg-accent-2</div>
+        <div class="bg-orange bg-accent-3">.bg-orange.bg-accent-3</div>
+        <div class="bg-orange bg-accent-4">.bg-orange.bg-accent-4</div>
+        <div class="bg-orange bg-darken-1">.bg-orange.bg-darken-1</div>
+        <div class="bg-orange bg-darken-2">.bg-orange.bg-darken-2</div>
+        <div class="bg-orange bg-darken-3">.bg-orange.bg-darken-3</div>
+        <div class="bg-orange bg-darken-4">.bg-orange.bg-darken-4</div>
+        <div class="bg-orange">bg-orange</div>
+        <div class="bg-orange bg-lighten-1">.bg-orange.bg-lighten-1</div>
+        <div class="bg-orange bg-lighten-2">.bg-orange.bg-lighten-2</div>
+        <div class="bg-orange bg-lighten-3">.bg-orange.bg-lighten-3</div>
+        <div class="bg-orange bg-lighten-4">.bg-orange.bg-lighten-4</div>
+        <div class="bg-orange bg-lighten-5">.bg-orange.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-deep-orange bg-accent-1">.bg-deep-orange.bg-accent-1</div>
+        <div class="bg-deep-orange bg-accent-2">.bg-deep-orange.bg-accent-2</div>
+        <div class="bg-deep-orange bg-accent-3">.bg-deep-orange.bg-accent-3</div>
+        <div class="bg-deep-orange bg-accent-4">.bg-deep-orange.bg-accent-4</div>
+        <div class="bg-deep-orange bg-darken-1">.bg-deep-orange.bg-darken-1</div>
+        <div class="bg-deep-orange bg-darken-2">.bg-deep-orange.bg-darken-2</div>
+        <div class="bg-deep-orange bg-darken-3">.bg-deep-orange.bg-darken-3</div>
+        <div class="bg-deep-orange bg-darken-4">.bg-deep-orange.bg-darken-4</div>
+        <div class="bg-deep-orange">bg-deep-orange</div>
+        <div class="bg-deep-orange bg-lighten-1">.bg-deep-orange.bg-lighten-1</div>
+        <div class="bg-deep-orange bg-lighten-2">.bg-deep-orange.bg-lighten-2</div>
+        <div class="bg-deep-orange bg-lighten-3">.bg-deep-orange.bg-lighten-3</div>
+        <div class="bg-deep-orange bg-lighten-4">.bg-deep-orange.bg-lighten-4</div>
+        <div class="bg-deep-orange bg-lighten-5">.bg-deep-orange.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-brown bg-accent-1">.bg-brown.bg-accent-1</div>
+        <div class="bg-brown bg-accent-2">.bg-brown.bg-accent-2</div>
+        <div class="bg-brown bg-accent-3">.bg-brown.bg-accent-3</div>
+        <div class="bg-brown bg-accent-4">.bg-brown.bg-accent-4</div>
+        <div class="bg-brown bg-darken-1">.bg-brown.bg-darken-1</div>
+        <div class="bg-brown bg-darken-2">.bg-brown.bg-darken-2</div>
+        <div class="bg-brown bg-darken-3">.bg-brown.bg-darken-3</div>
+        <div class="bg-brown bg-darken-4">.bg-brown.bg-darken-4</div>
+        <div class="bg-brown">bg-brown</div>
+        <div class="bg-brown bg-lighten-1">.bg-brown.bg-lighten-1</div>
+        <div class="bg-brown bg-lighten-2">.bg-brown.bg-lighten-2</div>
+        <div class="bg-brown bg-lighten-3">.bg-brown.bg-lighten-3</div>
+        <div class="bg-brown bg-lighten-4">.bg-brown.bg-lighten-4</div>
+        <div class="bg-brown bg-lighten-5">.bg-brown.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-blue-grey bg-accent-1">.bg-blue-grey.bg-accent-1</div>
+        <div class="bg-blue-grey bg-accent-2">.bg-blue-grey.bg-accent-2</div>
+        <div class="bg-blue-grey bg-accent-3">.bg-blue-grey.bg-accent-3</div>
+        <div class="bg-blue-grey bg-accent-4">.bg-blue-grey.bg-accent-4</div>
+        <div class="bg-blue-grey bg-darken-1">.bg-blue-grey.bg-darken-1</div>
+        <div class="bg-blue-grey bg-darken-2">.bg-blue-grey.bg-darken-2</div>
+        <div class="bg-blue-grey bg-darken-3">.bg-blue-grey.bg-darken-3</div>
+        <div class="bg-blue-grey bg-darken-4">.bg-blue-grey.bg-darken-4</div>
+        <div class="bg-blue-grey">bg-blue-grey</div>
+        <div class="bg-blue-grey bg-lighten-1">.bg-blue-grey.bg-lighten-1</div>
+        <div class="bg-blue-grey bg-lighten-2">.bg-blue-grey.bg-lighten-2</div>
+        <div class="bg-blue-grey bg-lighten-3">.bg-blue-grey.bg-lighten-3</div>
+        <div class="bg-blue-grey bg-lighten-4">.bg-blue-grey.bg-lighten-4</div>
+        <div class="bg-blue-grey bg-lighten-5">.bg-blue-grey.bg-lighten-5</div>
+    </div>
+    <div >
+        <div class="bg-grey bg-accent-1">.bg-grey.bg-accent-1</div>
+        <div class="bg-grey bg-accent-2">.bg-grey.bg-accent-2</div>
+        <div class="bg-grey bg-accent-3">.bg-grey.bg-accent-3</div>
+        <div class="bg-grey bg-accent-4">.bg-grey.bg-accent-4</div>
+        <div class="bg-grey bg-darken-1">.bg-grey.bg-darken-1</div>
+        <div class="bg-grey bg-darken-2">.bg-grey.bg-darken-2</div>
+        <div class="bg-grey bg-darken-3">.bg-grey.bg-darken-3</div>
+        <div class="bg-grey bg-darken-4">.bg-grey.bg-darken-4</div>
+        <div class="bg-grey">bg-grey</div>
+        <div class="bg-grey bg-lighten-1">.bg-grey.bg-lighten-1</div>
+        <div class="bg-grey bg-lighten-2">.bg-grey.bg-lighten-2</div>
+        <div class="bg-grey bg-lighten-3">.bg-grey.bg-lighten-3</div>
+        <div class="bg-grey bg-lighten-4">.bg-grey.bg-lighten-4</div>
+        <div class="bg-grey bg-lighten-5">.bg-grey.bg-lighten-5</div>
+    </div>
+
+
 
 </body>
 
