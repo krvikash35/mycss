@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sass --sourcemap=none --watch src/scss/index.scss:dist/css/material.css"
+    "sass": "sass --sourcemap=none --watch src/scss/index.scss:dist/css/material.css",
+    "nodemon": "nodemon index.js",
+    "dev": "concurrently --kill-others \"npm run sass\"  \"npm run nodemon\" "
   },
   "repository": {
     "type": "git",
@@ -25,5 +27,9 @@
   "homepage": "https://github.com/krvikash35/mycss#readme",
   "dependencies": {
     "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "nodemon": "^1.11.0"
   }
 }
