@@ -9,30 +9,72 @@
 .clickable{
     cursor: pointer;
 }
+
+.hide{
+  visibility: hidden;
+}
+
+.show{
+  visibility: visible;
+}
+
+.display-none
+{
+  display: none;
+}
+
 .pre-ws{
     white-space: pre;
 }
 
-.center-nowrap{
+.center{
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: center;
 }
 
-.center-wrap{
+.left{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.right{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.left > *, .right > *, .center > *{
+  margin: 5px 5px 5px 5px;
+}
+
+.center-equal-space{
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-
 }
 
-.center-equal{
+ .center-equal-space > *{
+   margin: 5px auto 5px auto;
+ }
+
+//all chidren element will be of equal width, center horizontly and vertically
+.center-equal-size{
+  display: flex;
+  justify-content: space-around;
+}
+
+.center-equal-size > *{
   flex-grow: 1;
   flex-basis: 0;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5px;
 }
 
 
