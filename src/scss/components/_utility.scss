@@ -5,6 +5,14 @@
 4. text-disabled
 5. z-depth-x
 */
+
+.clickable{
+    cursor: pointer;
+}
+.pre-ws{
+    white-space: pre;
+}
+
 .center-nowrap{
   display: flex;
   justify-content: space-around;

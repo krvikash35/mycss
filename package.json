@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --sourcemap=none --watch src/scss/index.scss:dist/css/material.css",
+    "sass1": "sass --sourcemap=none --watch src/scss/index.scss:D:\\MY_WORKSPACE\\iso8583_web\\iso8583_tcp\\web\\client\\app\\public\\css\\mycss\\dist\\css\\material.css",
     "nodemon": "nodemon index.js",
-    "dev": "concurrently --kill-others \"npm run sass\"  \"npm run nodemon\" "
+    "dev": "concurrently --kill-others \"npm run sass1\"  \"npm run nodemon\" "
   },
   "repository": {
     "type": "git",
