@@ -77,6 +77,18 @@
   margin: 5px;
 }
 
+.equal{
+  display: flex;
+}
+.equal > *{
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .text-primary{
   @if $theme-type == "dark"{

@@ -1,0 +1,14 @@
+[hidden]{
+  display: none;
+}
+
+input[type="text"]{
+  color: $text-color;
+  @if $theme-type == "dark"{
+    background-color: rgba(#CCCCCC, 0.25)
+  }
+  @else{
+    background-color: rgba(#999999, 0.40)
+  }
+  border-radius: 5px;
+}
