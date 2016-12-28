@@ -15,9 +15,11 @@
 }
 
 .table td{
-  color: rgba(#000000, 0.87)
+  // color: rgba(#000000, 0.87)
+  color: rgba($text-color, 0.87)
 }
 
 .table th{
-  color: rgba(#000000, 0.54)
+  // color: rgba(#000000, 0.54)
+  color: rgba($text-color, 0.54)
 }

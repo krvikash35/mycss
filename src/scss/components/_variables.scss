@@ -34,7 +34,7 @@
 /* 2. Colors
    ========================================================================== */
 $theme-type: "dark" !default; // dark or light
-$theme-color: "blue" !default;
+$theme-color: "teal" !default;
 $primary-color: color($theme-color, "darken-3") !default;
 $secondary-color: color($theme-color, "darken-2") !default;
 $accent-color: #FF4081 !default; //pink A200
