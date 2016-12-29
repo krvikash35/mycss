@@ -1,5 +1,6 @@
 .table{
   width: 100%;
+  font-size: 10px;
 }
 .table td,
 .table th{
@@ -21,4 +22,8 @@
 
 .table th{
   color: rgba($text-color, 0.54)
+}
+
+.table tr{
+  line-height: 5px !important;
 }
