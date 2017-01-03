@@ -10,8 +10,11 @@
   @extend .bg-lighten-3;
   @extend .text-red;
   @extend .text-darken-1;
-  padding:5px;
+  padding:10px;
+  margin: 0px 10px 0px 10px;
   border-radius: 5px;
+  // overflow-x: hidden;
+  // overflow: hidden;
 }
 
 .label-success{
@@ -48,6 +51,9 @@
     white-space: pre;
 }
 
+pre{
+  white-space: pre-wrap;
+}
 .center{
   display: flex;
   flex-direction: row;
@@ -161,4 +167,19 @@
 
 [hidden]{
   display: none;
+}
+
+
+.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  // font-size: 50px;
+  color: $text-color;
+  line-height: 70px;
+  text-align: center;
+  // background-color: transparent;
+  // background: #000
+  // border-color: #0000ff;
+  border: 3px solid $accent-color;
 }
