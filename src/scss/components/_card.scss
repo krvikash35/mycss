@@ -31,11 +31,21 @@
 .card-container > .card > .card-body {
   @extend .secondary-text;
   padding: 5px;
+  // display: table-row;
 }
 
 .card-container > .card > .card-body > .card-body-item {
   padding: 5px;
+  display: flex;
+  justify-content: space-between;;
+  // display: table-row;
 }
+
+.card-body-item > label{
+  // @extend .disabled-text ;
+  @extend .secondary-text ;
+}
+
 .card-container > .card > .card-footer > button{
   color: $accent-color !important;
 }
