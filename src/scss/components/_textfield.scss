@@ -1,7 +1,7 @@
 input[type="text"]{
   color: $text-color;
   border: none;
-  border-bottom: 2px solid $accent-color;
+  border-bottom: 1px solid $accent-color;
   outline: none;
   background-color: transparent;
 }
@@ -31,4 +31,60 @@ input[type="text"]{
   @else{
     color: rgba($text-color, 0.38);
   }
+}
+
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 15px;
+}
+.switch input {display:none;}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(#000000, 0.38);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 0px;
+  bottom: -1px;
+  background-color: rgba(#FAFAFA, 1);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+// .slider.round:before {
+//   border-radius: 50%;
+// }
+
+input:checked + .slider {
+  // background-color: rgba(#FAFAFA, 0.50);
+  background-color: rgba($accent-color, 0.50);
+}
+//
+// input:focus + .slider {
+//   box-shadow: 0 0 1px #2196F3;
+// }
+//
+input:checked + .slider:before {
+  // -webkit-transform: translateX(26px);
+  // -ms-transform: translateX(26px);
+  transform: translateX(17px);
+  background-color: rgba($accent-color, 1);
 }
