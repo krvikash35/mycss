@@ -37,7 +37,7 @@ $theme-type: "dark" !default; // dark(teal) or light(grey)
 $theme-color: "teal" !default;
 $primary-color: color($theme-color, "darken-3") !default;
 $secondary-color: color($theme-color, "darken-2") !default;
-$accent-color: #FF4081 !default; //pink A200
+$accent-color: #F50057 !default; //pink A200 red: FF1744, D50000, green: 1DE9B6, 00C853, 
 $text-color: #FFFFFF !default; //white
 
 @if $theme-type != "dark" {

@@ -5,3 +5,30 @@ input[type="text"]{
   outline: none;
   background-color: transparent;
 }
+
+.primary-text{
+  @if $theme-type == "dark"{
+    color: rgba($text-color, 1);
+  }
+  @else{
+    color: rgba($text-color, 0.87);
+  }
+}
+
+.secondary-text{
+  @if $theme-type == "dark"{
+    color: rgba($text-color, 0.70);
+  }
+  @else{
+    color: rgba($text-color, 0.54);
+  }
+}
+
+.disabled-text{
+  @if $theme-type == "dark"{
+    color: rgba($text-color, 0.50);
+  }
+  @else{
+    color: rgba($text-color, 0.38);
+  }
+}

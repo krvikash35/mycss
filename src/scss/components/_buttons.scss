@@ -52,24 +52,14 @@
 .btn-flat.disabled,
 .btn-flat:disabled,
 .btn-flat[disabled] {
-    @if $theme-type == "dark" {
-        color: rgba($text-color, 0.30);
-    }
-    @else {
-        color: rgba($text-color, 0.26);
-    }
+    @extend .disabled-text;
     background-color: transparent !important;
 }
 
 .btn-flat-disabled {
   pointer-events: none;
-    @if $theme-type == "dark" {
-        color: rgba($text-color, 0.30);
-    }
-    @else {
-        color: rgba($text-color, 0.26);
-    }
-    background-color: transparent !important;
+  @extend .disabled-text;
+  background-color: transparent !important;
 }
 //btn-raised style
 .btn-raised {
@@ -95,26 +85,14 @@
 .btn-raised[disabled] {
     background-color: rgba($text-color, 0.12);
     @extend .z-depth-0;
-
-    @if $theme-type == "dark" {
-        color: rgba($text-color, 0.30);
-    }
-    @else {
-        color: rgba($text-color, 0.26);
-    }
+    @extend .disabled-text;
 }
 
 .btn-raised-disabled {
     pointer-events: none;
     background-color: rgba($text-color, 0.12) !important;
     @extend .z-depth-0;
-
-    @if $theme-type == "dark" {
-        color: rgba($text-color, 0.30);
-    }
-    @else {
-        color: rgba($text-color, 0.26);
-    }
+    @extend .disabled-text;
 }
 
 .btn-fab {
