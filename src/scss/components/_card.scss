@@ -9,9 +9,7 @@
 
 .card-container > .card{
   @extend .z-depth-1;
-  // background-color: $accent-color;
-  // margin-top: 10px;
-  max-width: 400px;
+  max-width: 450px;
   min-width: 400px;
 }
 
@@ -27,8 +25,7 @@
 .card-container > .card > .card-header {
   @extend .primary-text;
   padding: 5px;
-  // font-style: italic;
-  text-decoration: underline;
+  // text-decoration: underline;
 }
 
 .card-container > .card > .card-body {
@@ -37,7 +34,7 @@
 }
 
 .card-container > .card > .card-body > .card-body-item {
-  padding: 2px;
+  padding: 5px;
 }
 .card-container > .card > .card-footer > button{
   color: $accent-color !important;
