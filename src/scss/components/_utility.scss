@@ -36,6 +36,18 @@
 
 }
 
+.divider-vertical{
+  width:1px;
+  height:100vh;
+  @if $theme-type == "dark"{
+    background: rgba(#FFFFFF, 0.12);
+  }
+  @else{
+    background: rgba(#000000, 0.12);
+  }
+
+}
+
 .label-error{
   @extend .bg-red;
   @extend .bg-lighten-3;

@@ -1,0 +1,22 @@
+.book{
+ margin: 10px;
+ // border: 1px solid white;
+ display: flex;
+}
+
+.book > .preface{
+  padding: 5px 10px 5px 5px;
+  height:80vh;
+  @if $theme-type == "dark"{
+    border-right: 2px solid rgba(#FFFFFF, 0.12)
+  }
+  @else{
+    border-right: 2px solid rgba(#000000, 0.12)
+  }
+}
+
+.book > .content{
+  // max-width: 75%;
+  // border: 1px solid white;
+  padding: 5px 5px 5px 10px
+}
