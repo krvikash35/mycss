@@ -5,10 +5,19 @@
 4. text-disabled
 5. z-depth-x
 */
-
+.webconsole{
+  margin: 10px;
+  padding: 10px;
+  height: 500px;
+  display: block;
+  overflow-y: scroll;
+  background: black;
+  border-radius: 10px;
+  // color: red;
+}
 .disabled{
   pointer-events:none;
-  background-color: rgba($text-color, 0.12) ;  
+  background-color: rgba($text-color, 0.12) ;
 }
 
 .enabled{
