@@ -1,12 +1,16 @@
 .book{
- margin: 10px;
+ // margin: 10px;
  // border: 1px solid white;
- display: flex;
+ // display: flex;
 }
 
 .book > .preface{
-  padding: 5px 10px 5px 5px;
-  height:80vh;
+  position: fixed;
+  width: 200px;
+  //  height: 400px;
+  height: 92vh;
+  // padding: 5px 10px 5px 5px;
+  // height:80vh;
   @if $theme-type == "dark"{
     border-right: 2px solid rgba(#FFFFFF, 0.12)
   }
@@ -16,7 +20,13 @@
 }
 
 .book > .content{
-  // max-width: 75%;
-  // border: 1px solid white;
-  padding: 5px 5px 5px 10px
+     margin-left: 200px;
+     padding: 10px;
+    //  height: 500px;
+    height: 89vh;
+     width: auto;
+     position: relative;
+    //  background: #f00;
+     overflow: auto;
+     z-index: 1;
 }
