@@ -53,11 +53,21 @@
   @extend .bg-lighten-3;
   @extend .text-red;
   @extend .text-darken-1;
-  padding:10px;
+  padding:0px 10px 10px 10px;
   margin: 0px 10px 0px 10px;
   border-radius: 5px;
   // overflow-x: hidden;
   // overflow: hidden;
+}
+
+.label-error-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label-error-header > *{
+
 }
 
 .label-success{
@@ -124,11 +134,13 @@ pre{
 
 .center-equal-space{
   display: flex;
-  justify-content: space-around;
+  justify-content:center;
+
 }
 
  .center-equal-space > *{
    margin: 5px auto 5px auto;
+
  }
 
 //all chidren element will be of equal width, center horizontly and vertically
