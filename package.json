@@ -4,7 +4,7 @@
   "description": "simple css library on material design",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --sourcemap=none --watch src/scss/index.scss:dist/css/material.css",
     "sass1": "sass --sourcemap=none --watch src/scss/index.scss:D:\\MY_WORKSPACE\\iso8583_web\\iso8583_tcp\\web\\client\\app\\public\\css\\mycss\\dist\\css\\material.css",
