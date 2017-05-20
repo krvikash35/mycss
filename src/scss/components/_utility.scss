@@ -112,6 +112,7 @@ pre{
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+  align-items: center;
 }
 
 .left{
@@ -237,4 +238,12 @@ pre{
   // background: #000
   // border-color: #0000ff;
   border: 3px solid $accent-color;
+}
+
+.bg-accent{
+  background-color: $accent-color;
+}
+
+.text-accent{
+  color: $accent-color;
 }
