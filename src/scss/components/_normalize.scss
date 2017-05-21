@@ -4,21 +4,16 @@
  *    without disabling user zoom.
  */
 
-html {
-  font-family: Lato; /* 1 */
+html,body {
+  font-family: 'Lato', sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/**
- * Remove default margin.
- */
-
-body {
   margin: 0;
-  background-color: $secondary-color;
+  background-color: $primary-color;
   color: $text-color;
+  height: 100%;
 }
+
 
 header{
   background-color: $primary-color;

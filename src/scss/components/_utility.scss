@@ -247,3 +247,13 @@ pre{
 .text-accent{
   color: $accent-color;
 }
+
+.on-hover{
+        border-radius: 10px;
+        @if $theme-type == "dark" {
+            background-color: rgba(#CCCCCC, 0.15);
+        }
+        @else {
+            background-color: rgba(#999999, 0.30);
+        }
+}
