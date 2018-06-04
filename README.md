@@ -1,7 +1,7 @@
 # mycss
 Material Design Library using css
 
-# flexbox properties
+## flexbox properties
 ```
 .flex-container{
     display: flex || inline-flex;
@@ -42,7 +42,7 @@ flex-shrink: how much flex-item will shrink relative to rest of flex-items when 
 flex-basis: it is same as width and height properties.  specifies the initial main size of the flex-item before free space is distributed.
 flex: shorthand for flex-grow, flex-shrink, flex-basis.
 ```
-# Grid
+## Grid
 ```
 .grid{
   display: grid;
@@ -68,7 +68,7 @@ flex: shorthand for flex-grow, flex-shrink, flex-basis.
 }
 ```
 
-# Transition
+## Transition
 
 The CSS transition property listens for changes to specified properties (background-color, width, height, etc.) over time.
 ```
@@ -85,7 +85,7 @@ div {
 }
 ```
 
-# Transform
+## Transform
 
 The CSS transform property rotates/scales/skews an element over the X,Y, or Z axes. It's behavior does not relate to transition. Simply put, on page load, the element will just appear rotated/skewed/scaled.
 
@@ -105,7 +105,38 @@ div:hover {
   transform: rotate(30deg);
 }
 ```
-# Expensive CSS Property
+
+## Animation
+
+```
+/* The animation code */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+/* The element to apply the animation to */
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 3; //infinite
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+```
+## Position
+`static:`	Default value. Elements render in order, as they appear in the document flow.
+
+`absolute:`	The element is positioned relative to its first positioned (not static) ancestor element.
+
+`fixed:`	The element is positioned relative to the browser window.
+
+`relative:`	The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to the element's LEFT position
+
+## Expensive CSS Property
 Whenever you make any changes to CSS style or attribute of HTML element, the browser generally perform three steps. `1. Layout calculation` to decide where to place the element on the screen. `2. Paint operation` to start filling actual pixel on the screen. `3. Compositing` multiple layers if any. Each of this operation can be quite expensive depending on actual use case, resulting in page low performance
 ```
 Layout & Paint & Composite: display
