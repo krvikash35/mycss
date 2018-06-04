@@ -15,6 +15,7 @@ Material Design Library using css
 ```
 Notes:
 -------
+```
 display: only properties need to set to make all immediate children flex items
 flex-direction: how flex-items are laid out in flex-container
 flex-wrap: whether to wrap flex-items to new line or stack all items on single line.
@@ -22,6 +23,7 @@ flex-flow: shorthand for flex-direction and flex-wrap
 justify-content: align flex-items along the main axis. it help distribute left free space among flex items.
 align-items: flex items can be aligned in the cross axis of the current line of the flex container, similar to justify-content but in the perpendicular direction.
 align-content:
+```
 ```
 .flex-item{
   order: 0 <number>;
@@ -33,12 +35,13 @@ align-content:
 ```
 Notes
 -------
+```
 order: order in which children flex-item will appear.
 flex-grow: how much flex-item will grow relative to rest of flex-items when positive free space is distributed.
 flex-shrink: how much flex-item will shrink relative to rest of flex-items when negative free space is distributed.
 flex-basis: it is same as width and height properties.  specifies the initial main size of the flex-item before free space is distributed.
 flex: shorthand for flex-grow, flex-shrink, flex-basis.
-
+```
 # Grid
 ```
 .grid{
