@@ -1,7 +1,7 @@
 # mycss
 Material Design Library using css
 
-#flexbox properties
+# flexbox properties
 ```
 .flex-container{
     display: flex || inline-flex;
@@ -40,6 +40,7 @@ flex-basis: it is same as width and height properties.  specifies the initial ma
 flex: shorthand for flex-grow, flex-shrink, flex-basis.
 
 # Grid
+```
 .grid{
   display: grid;
   grid-template-columns: 3fr 1fr; /* 2 columns; col1:3fr, col2:1fr*/
@@ -62,3 +63,4 @@ flex: shorthand for flex-grow, flex-shrink, flex-basis.
   justify-self: "";/* useIn gridItem,forRow: start end stretch(default) center*/
   align-self: "";/* useIn gridItem,forColumn: start end stretch(default) center*/
 }
+```
