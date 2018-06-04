@@ -80,7 +80,7 @@ div {
   width: 100px;
   height: 100px;
   background-color: yellow;
-  transition: background-color 1s;
+  transition: background-color 1s ease-in-out;
   /* timing function and delay not specified*/
 }
 ```
@@ -104,4 +104,11 @@ div {
 div:hover {
   transform: rotate(30deg);
 }
+```
+# Expensive CSS Property
+Whenever you make any changes to CSS style or attribute of HTML element, the browser generally perform three steps. `1. Layout calculation` to decide where to place the element on the screen. `2. Paint operation` to start filling actual pixel on the screen. `3. Compositing` multiple layers if any. Each of this operation can be quite expensive depending on actual use case, resulting in page low performance
+```
+Layout & Paint & Composite: display
+Paint: background-color
+Composite: opacity, transform
 ```
