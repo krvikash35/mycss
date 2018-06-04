@@ -67,3 +67,41 @@ flex: shorthand for flex-grow, flex-shrink, flex-basis.
   align-self: "";/* useIn gridItem,forColumn: start end stretch(default) center*/
 }
 ```
+
+# Transition
+
+The CSS transition property listens for changes to specified properties (background-color, width, height, etc.) over time.
+```
+.selector {
+    transtion: [property-name] [duration] [timing-function] [delay]
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  transition: background-color 1s;
+  /* timing function and delay not specified*/
+}
+```
+
+# Transform
+
+The CSS transform property rotates/scales/skews an element over the X,Y, or Z axes. It's behavior does not relate to transition. Simply put, on page load, the element will just appear rotated/skewed/scaled.
+
+```
+.selector {
+    transform: [rotate] [skew] [scale] [translate] [perspective]
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  transition: transform 1s;
+  /* timing function and delay not specified*/
+}
+div:hover {
+  transform: rotate(30deg);
+}
+```
